@@ -5,11 +5,11 @@ import {Observable} from "rxjs";
 @Injectable({
   providedIn: 'root'
 })
-export class RoomService {
+export class AirportService {
 
   // http://localhost:8081/api/v1/room/
   // am facut redirect de la /api/* la https://localhost:8081 in fisierul de proxy.conf.json
-  private roomsUrl = "/api/v1/room"
+  private airportsUrl = "/api/v1/airport"
 
   private httpClient;
 
@@ -17,8 +17,8 @@ export class RoomService {
     this.httpClient = httpClient;
   }
 
-  // http://localhost:8081/api/v1/room/findAll
+  // http://localhost:8081/api/v1/airport/findAll
   public getAll(): Observable<Object> {
-    return this.httpClient.get(this.roomsUrl + "/findAll");
+    return this.httpClient.get(this.airportsUrl + "/findAll")
   }
 }

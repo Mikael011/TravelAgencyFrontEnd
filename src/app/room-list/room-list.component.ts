@@ -17,9 +17,8 @@ export class RoomListComponent implements OnInit {
 
   ngOnInit(): void {
     this.roomsService.getAll().subscribe(succesfulResponse => {
-      console.log("Succesful response received" + succesfulResponse);
+      console.log("Successful response received " + succesfulResponse);
       this.rooms = (succesfulResponse as RoomDTO[]);
     })
   }
-
 }
