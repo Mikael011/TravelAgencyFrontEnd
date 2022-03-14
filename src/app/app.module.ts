@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { RoomListComponent } from './room-list/room-list.component';
 import {HttpClientModule} from "@angular/common/http";
 import { AirportListComponent } from './airport-list/airport-list.component';
+import { TicketListComponent } from './ticket-list/ticket-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoomListComponent,
-    AirportListComponent
+    AirportListComponent,
+    TicketListComponent
   ],
   imports: [
     BrowserModule,

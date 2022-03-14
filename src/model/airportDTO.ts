@@ -6,5 +6,4 @@ export class AirportDTO {
     this.name = name;
     this.cityId = cityId;
   }
-
 }

@@ -9,7 +9,7 @@ import {AirportService} from "../service/airport.service";
 })
 export class AirportListComponent implements OnInit {
 
-  airport: AirportDTO[] = [];
+  airports: AirportDTO[] = [];
 
   constructor(private airportService: AirportService) {
     this.airportService = airportService;
@@ -18,7 +18,7 @@ export class AirportListComponent implements OnInit {
   ngOnInit(): void {
     this.airportService.getAll().subscribe(succesfulRsponse => {
       console.log("Successful response received " + succesfulRsponse);
-      this.airport = (succesfulRsponse as AirportDTO[]);
+      this.airports = (succesfulRsponse as AirportDTO[]);
     });
   }
 }
