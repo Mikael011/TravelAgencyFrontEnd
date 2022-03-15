@@ -1,15 +1,15 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
-export class RoomService {
+export class TicketService {
 
   // http://localhost:8081/api/v1/room/
   // am facut redirect de la /api/* la https://localhost:8081 in fisierul de proxy.conf.json
-  private roomsUrl = "/api/v1/room"
+  private ticketUrl = "/api/v1/ticket";
 
   private httpClient;
 
@@ -17,8 +17,7 @@ export class RoomService {
     this.httpClient = httpClient;
   }
 
-  // http://localhost:8081/api/v1/room/findAll
   public getAll(): Observable<Object> {
-    return this.httpClient.get(this.roomsUrl + "/findAll");
+    return this.httpClient.get(this.ticketUrl + "/findAll")//backend not finished of Mihai
   }
 }
