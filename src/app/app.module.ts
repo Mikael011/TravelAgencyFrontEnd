@@ -1,13 +1,13 @@
-import {AppComponent} from "./app.component";
-import {AppRoutingModule} from "./app-routing.module";
-import {BrowserModule} from "@angular/platform-browser";
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { RoomListComponent } from './room-list/room-list.component';
 import {HttpClientModule} from "@angular/common/http";
-import {CityListComponent} from "./city-list/city-list.component";
-import {CountryListComponent} from "./country-list/country-list.component";
-import {AirportListComponent} from "./airport-list/airport-list.component";
-import {RoomListComponent} from "./room-list/room-list.component";
-import {NgModule} from "@angular/core";
-import {TicketListComponent} from "./ticket-list/ticket-list.component";
+import { AirportListComponent } from './airport-list/airport-list.component';
+import { TicketListComponent } from './ticket-list/ticket-list.component';
+import { HotelListComponent } from './hotel-list/hotel-list.component';
+import { ReservationListComponent } from './reservation-list/reservation-list.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +15,10 @@ import {TicketListComponent} from "./ticket-list/ticket-list.component";
     RoomListComponent,
     AirportListComponent,
     TicketListComponent,
-    CountryListComponent,
-    CityListComponent
-
+    HotelListComponent,
+    ReservationListComponent,
   ],
-  imports:  [
+  imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
@@ -27,4 +26,4 @@ import {TicketListComponent} from "./ticket-list/ticket-list.component";
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

@@ -16,9 +16,9 @@ export class AirportListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.airportService.getAll().subscribe(succesfulRsponse => {
-      console.log("Successful response received " + succesfulRsponse);
-      this.airports = (succesfulRsponse as AirportDTO[]);
+    this.airportService.getAll().subscribe(succesfulResponse => {
+      console.log("Successful response received " + succesfulResponse);
+      this.airports = (succesfulResponse as AirportDTO[]);
     });
   }
 }
