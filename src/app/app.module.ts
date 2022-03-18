@@ -10,6 +10,8 @@ import { HotelListComponent } from './hotel-list/hotel-list.component';
 import { ReservationListComponent } from './reservation-list/reservation-list.component';
 import { RoomListComponent } from './room-list/room-list.component';
 import { TicketListComponent } from './ticket-list/ticket-list.component';
+import {FormsModule} from "@angular/forms";
+
 
 @NgModule({
   declarations: [
@@ -22,11 +24,12 @@ import { TicketListComponent } from './ticket-list/ticket-list.component';
     RoomListComponent,
     TicketListComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

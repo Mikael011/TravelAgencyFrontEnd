@@ -1,21 +1,9 @@
 <h1>Airports</h1>
 
-<a href="http://localhost:4200/cities">
-  <button>Go to Cities</button>
-</a>
-<a href="http://localhost:4200/coutries">
-  <button>Go to Countries</button>
-</a>
-<a href="http://localhost:4200/hotels">
-  <button>Go to Hotels</button>
-</a>
-<a href="http://localhost:4200/tickets">
-  <button>Go to Tickets</button>
-</a>
-
 <div *ngFor="let airport of airports">
-  <p>id : {{airport.cityId}}</p>
-  <p>Name : {{airport.name}}</p>
+  <p>name : {{airport.name}}</p>
+  <p>cityId : {{airport.cityId}}</p>
 </div>
 
 <!--<input type="text" [(ngModel)]="airportcreateDto.name" >-->
+
