@@ -1,1 +1,8 @@
-<p>Reservations</p>
+<h1>Reservations</h1>
+
+<div *ngFor="let reservation of reservations">
+  <p>roomId : {{reservation.roomId}}</p>
+  <p>userId : {{reservation.userId}}</p>
+  <p>startDate : {{reservation.startDate}}</p>
+  <p>endDate: {{reservation.endDate}}</p>
+</div>

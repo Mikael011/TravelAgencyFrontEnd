@@ -1,16 +1,6 @@
 <h1>Cities</h1>
 
-<a href="http://localhost:4200/airports">
-  <button>Go to Airports</button>
-</a>
-<a href="http://localhost:4200/countries">
-  <button>Go to Countries</button>
-</a>
-<a href="http://localhost:4200/hotels">
-  <button>Go to Hotels</button>
-</a>
-
 <div *ngFor="let city of cities">
-  <p>id : {{city.countryId}}</p>
   <p>Name : {{city.name}}</p>
+  <p>CountryId : {{city.countryId}}</p>
 </div>
