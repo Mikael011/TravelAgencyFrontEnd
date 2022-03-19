@@ -11,6 +11,7 @@ import { ReservationListComponent } from './reservation-list/reservation-list.co
 import { RoomListComponent } from './room-list/room-list.component';
 import { TicketListComponent } from './ticket-list/ticket-list.component';
 import {FormsModule} from "@angular/forms";
+import { TourListComponent } from './tour-list/tour-list.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import {FormsModule} from "@angular/forms";
     ReservationListComponent,
     RoomListComponent,
     TicketListComponent,
+    TourListComponent,
   ],
     imports: [
         BrowserModule,
