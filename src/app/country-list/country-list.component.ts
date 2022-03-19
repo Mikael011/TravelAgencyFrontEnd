@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CountryDTO} from "../../model/countryDTO";
 import {CountryService} from "../service/country.service";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-country-list',
@@ -9,10 +11,9 @@ import {CountryService} from "../service/country.service";
 })
 export class CountryListComponent implements OnInit {
 
-  countries : CountryDTO[] = [];
+  countries: CountryDTO[] = [];
 
   constructor(private countryService: CountryService) {
-    this.countryService = countryService;
   }
 
   ngOnInit(): void {
@@ -21,5 +22,6 @@ export class CountryListComponent implements OnInit {
       this.countries = (succesfulRsponse as CountryDTO[]);
     });
   }
+
 }
 

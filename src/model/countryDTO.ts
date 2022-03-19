@@ -1,9 +1,9 @@
 export class CountryDTO {
+  id: number;
   name: string;
-  cityId: number;
 
-  constructor(name: string, cityId: number) {
+  constructor(id: number, name: string) {
     this.name = name;
-    this.cityId = cityId;
+    this.id = id;
   }
 }

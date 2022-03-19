@@ -1,13 +1,15 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {CountryDTO} from "../../model/countryDTO";
+import {CountryCreateDTO} from "../../model/countryCreateDTO";
 
 @Injectable({
   providedIn: 'root'
 })
 export class CountryService {
 
-  private countrysUrl = "/api/v1/country"
+  private countriesUrl = "/api/v1/country"
 
   private httpClient;
 
@@ -16,6 +18,12 @@ export class CountryService {
   }
 
   public getAll(): Observable<Object> {
-      return this.httpClient.get(this.countrysUrl + "/findAll")
-    }
+    return this.httpClient.get(this.countriesUrl + "/findAll")
   }
+
+  public create(dto: { name: any }): Observable<Object> {
+    return this.httpClient.post(this.countriesUrl + '/create', dto);
+  }
+}
+
+

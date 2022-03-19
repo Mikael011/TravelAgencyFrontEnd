@@ -7,6 +7,9 @@ import {HotelListComponent} from "./hotel-list/hotel-list.component";
 import {ReservationListComponent} from "./reservation-list/reservation-list.component";
 import {RoomListComponent} from "./room-list/room-list.component";
 import {TicketListComponent} from "./ticket-list/ticket-list.component";
+import {CountryFormComponent} from "./country-form/country-form.component";
+import {CityFormComponent} from "./city-form/city-form.component";
+import {AirportFormComponent} from "./airport-form/airport-form.component";
 
 const routes: Routes = [
   {path: 'airports', component: AirportListComponent},
@@ -16,6 +19,9 @@ const routes: Routes = [
   {path: 'reservations', component: ReservationListComponent},
   {path: 'rooms', component: RoomListComponent},
   {path: 'tickets', component: TicketListComponent},
+  {path: 'create-country', component: CountryFormComponent},
+  {path: 'create-city', component: CityFormComponent},
+  {path: 'create-airport', component: AirportFormComponent}
 ];
 
 @NgModule({

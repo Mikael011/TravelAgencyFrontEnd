@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Create new airport</h1>
+  <form [formGroup]="airportForm" (ngSubmit)="onSubmit()">
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Airport name:</mat-label>
+        <input matInput formControlName="name">
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button type="submit">Create airport</button>
+
+  </form>
+</div>
