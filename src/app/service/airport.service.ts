@@ -21,4 +21,8 @@ export class AirportService {
   public getAll(): Observable<Object> {
     return this.httpClient.get(this.airportsUrl + "/findAll")
   }
+
+  public create(dto: { name: any }): Observable<Object> {
+    return this.httpClient.post(this.airportsUrl + "/create", dto);
+  }
 }

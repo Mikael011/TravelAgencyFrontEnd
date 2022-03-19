@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Create new city</h1>
+  <form [formGroup]="cityForm" (ngSubmit)="onSubmit()">
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>City name:</mat-label>
+        <input matInput formControlName="name">
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button type="submit">Create City</button>
+
+  </form>
+</div>
