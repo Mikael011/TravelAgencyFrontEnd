@@ -20,6 +20,7 @@ import { CountryFormComponent } from './country-form/country-form.component';
 import { CityFormComponent } from './city-form/city-form.component';
 import { AirportFormComponent } from './airport-form/airport-form.component';
 import { HotelFormComponent } from './hotel-form/hotel-form.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -37,7 +38,8 @@ import { HotelFormComponent } from './hotel-form/hotel-form.component';
     CountryFormComponent,
     CityFormComponent,
     AirportFormComponent,
-    HotelFormComponent
+    HotelFormComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
