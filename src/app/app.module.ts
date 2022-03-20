@@ -19,6 +19,7 @@ import {MatButtonModule} from "@angular/material/button";
 import { CountryFormComponent } from './country-form/country-form.component';
 import { CityFormComponent } from './city-form/city-form.component';
 import { AirportFormComponent } from './airport-form/airport-form.component';
+import { HotelFormComponent } from './hotel-form/hotel-form.component';
 
 
 
@@ -35,7 +36,8 @@ import { AirportFormComponent } from './airport-form/airport-form.component';
     TravelFormComponent,
     CountryFormComponent,
     CityFormComponent,
-    AirportFormComponent
+    AirportFormComponent,
+    HotelFormComponent
   ],
   imports: [
     BrowserModule,
