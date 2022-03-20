@@ -1,10 +1,6 @@
 export class UserLoginDto{
+  // @ts-ignore
   email: string;
+  // @ts-ignore
   password: string;
-
-
-  constructor(email: string, password: string) {
-    this.email = email;
-    this.password = password;
-  }
 }

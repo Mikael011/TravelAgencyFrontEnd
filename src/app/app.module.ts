@@ -39,7 +39,7 @@ import { LoginComponent } from './login/login.component';
     CityFormComponent,
     AirportFormComponent,
     HotelFormComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

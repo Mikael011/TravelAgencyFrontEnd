@@ -14,8 +14,8 @@ export class LoginComponent implements OnInit {
   passwordValue: string = '';
 
 
-  constructor(private userService: UserService, private router: Router) {
-  }
+  constructor(private userService: UserService,
+              private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
       password: this.passwordValue
     };
     this.userService.login(userLoginDto).subscribe(response => {
-      alert("Logged in user");
+      alert('Logged in user');
       this.router.navigate(['/cities'])
     })
   }

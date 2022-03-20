@@ -1,14 +1,10 @@
 export class UserDto{
+  // @ts-ignore
   id: number;
+  // @ts-ignore
   name: string;
+  // @ts-ignore
   email:string;
+  // @ts-ignore
   role: string;
-
-
-  constructor(id: number, name: string, email: string, role: string) {
-    this.id = id;
-    this.name = name;
-    this.email = email;
-    this.role = role;
-  }
 }
