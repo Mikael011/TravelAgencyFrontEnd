@@ -9,6 +9,8 @@ import {CountryCreateDTO} from "../../model/countryCreateDTO";
 })
 export class CountryService {
 
+  // http://localhost:8081/api/v1/room/
+  // am facut redirect de la /api/* la https://localhost:8081 in fisierul de proxy.conf.json
   private countriesUrl = "/api/v1/country"
 
   private httpClient;
@@ -17,6 +19,7 @@ export class CountryService {
     this.httpClient = httpClient;
   }
 
+  // http://localhost:8081/api/v1/airport/findAll
   public getAll(): Observable<Object> {
     return this.httpClient.get(this.countriesUrl + "/findAll")
   }

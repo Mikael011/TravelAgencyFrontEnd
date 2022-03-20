@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {HotelService} from "../service/hotel.service";
+import {Router} from "@angular/router";
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-hotel-form',
@@ -7,9 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HotelFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private hotelService: HotelService, private router: Router) { }
+
+  hotelForm = new FormGroup(
+    {
+      name: new FormControl('')
+    }
+  )
 
   ngOnInit(): void {
+  }
+
+  onSubmit() {
+    const submitMessage = "Name: " + this.hotelForm.get('name')?.value;
+    alert(submitMessage);
+
+    const hotelDto = {
+      name: this.hotelForm.get('name')?.value,
+    };
+
+    this.hotelService.create(hotelDto).subscribe(response => {
+      alert(response);
+      this.router.navigate(['hotel']);
+    })
   }
 
 }

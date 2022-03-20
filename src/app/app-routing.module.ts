@@ -11,19 +11,21 @@ import {CountryFormComponent} from "./country-form/country-form.component";
 import {CityFormComponent} from "./city-form/city-form.component";
 import {AirportFormComponent} from "./airport-form/airport-form.component";
 import {LoginComponent} from "./login/login.component";
+import {HotelFormComponent} from "./hotel-form/hotel-form.component";
 
 const routes: Routes = [
   {path: 'airports', component: AirportListComponent},
+  {path: 'create-airport', component: AirportFormComponent},
   {path: 'cities', component: CityListComponent},
+  {path: 'create-city', component: CityFormComponent},
   {path: 'countries', component: CountryListComponent},
+  {path: 'create-country', component: CountryFormComponent},
   {path: 'hotels', component: HotelListComponent},
+  {path: 'create-hotel', component:HotelFormComponent},
   {path: 'reservations', component: ReservationListComponent},
   {path: 'rooms', component: RoomListComponent},
   {path: 'tickets', component: TicketListComponent},
-  {path: 'create-country', component: CountryFormComponent},
-  {path: 'create-city', component: CityFormComponent},
-  {path: 'create-airport', component: AirportFormComponent},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
 ];
 
 @NgModule({
