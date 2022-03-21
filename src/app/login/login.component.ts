@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     };
     this.userService.login(userLoginDto).subscribe(response => {
       alert('Logged in user');
-      this.router.navigate(['/cities'])
+      this.router.navigate(['/home-page'])
     })
   }
 
