@@ -12,6 +12,7 @@ import {CityFormComponent} from "./city-form/city-form.component";
 import {AirportFormComponent} from "./airport-form/airport-form.component";
 import {LoginComponent} from "./login/login.component";
 import {HotelFormComponent} from "./hotel-form/hotel-form.component";
+import {HomePageComponent} from "./home-page/home-page.component";
 
 const routes: Routes = [
   {path: 'airports', component: AirportListComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'rooms', component: RoomListComponent},
   {path: 'tickets', component: TicketListComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'home-page', component: HomePageComponent},
 ];
 
 @NgModule({
