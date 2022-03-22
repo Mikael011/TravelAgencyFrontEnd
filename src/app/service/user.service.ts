@@ -34,7 +34,7 @@ export class UserService {
 
   public login(userLoginDto: UserLoginDto): Observable<any> {
     //aici inca mai avem o problema cu authentificarea
-    this.optionsWithAuthorizationHeader = {headers: {Authorization: 'Basic ' + btoa(userLoginDto.email + ':' + userLoginDto.password)}}
+    this.optionsWithAuthorizationHeader = {headers: {Authorization: 'Basic Ym9nZGFuX3BvcGFuQHlhaG9vLmNvbToxMjM='}}
 
 
     // return this.httpClient.post(this.userUrl + '/login', userLoginDto) ;
