@@ -1,20 +1,19 @@
-<script src="../airport-list/airport-list.component.ts"></script>
 <div class="container">
   <h1>Create new airport</h1>
-  <form [formGroup]="airportForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
     <div>
       <mat-form-field appearance="outline">
-        <mat-label>Airport name:</mat-label>
+        <mat-label>Reservation name:</mat-label>
         <input matInput formControlName="name">
       </mat-form-field>
     </div>
 
-    <button mat-raised-button type="submit">Create airport</button>
+    <button mat-raised-button type="submit">Create reservation</button>
 
   </form>
 
-  <a href="http://localhost:4200/airports">
-    <button>Airports</button>
+  <a href="http://localhost:4200/reservations">
+    <button>Reservations</button>
   </a>
 
   <br>

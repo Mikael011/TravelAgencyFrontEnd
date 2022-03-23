@@ -21,4 +21,7 @@ export class RoomService {
   public getAll(): Observable<Object> {
     return this.httpClient.get(this.roomsUrl + "/findAll");
   }
+  public create(dto: { name: any }): Observable<Object> {
+    return this.httpClient.post(this.roomsUrl + "/create", dto);
+  }
 }

@@ -20,4 +20,8 @@ export class TicketService {
   public getAll(): Observable<Object> {
     return this.httpClient.get(this.ticketUrl + "/findAll")//backend not finished of Mihai
   }
+  public create(dto: { name: any }): Observable<Object> {
+    return this.httpClient.post(this.ticketUrl + "/create", dto);
+  }
+
 }
