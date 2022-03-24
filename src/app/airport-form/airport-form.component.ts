@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AirportService} from "../service/airport.service";
+import {ReservationService} from "../service/airport.service";
 import {Router} from "@angular/router";
 import {FormControl, FormGroup} from "@angular/forms";
 
@@ -10,7 +10,7 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class AirportFormComponent implements OnInit {
 
-  constructor(private airportService: AirportService, private router:Router) { }
+  constructor(private airportService: ReservationService, private router:Router) { }
 
   airportForm = new FormGroup({
     name: new FormControl('')
