@@ -29,7 +29,7 @@ export class RoomFormComponent implements OnInit {
 
     this.roomService.create(roomDto).subscribe(response => {
       // alert(response);
-      this.router.navigate(['airports']);
+      this.router.navigate(['rooms']);
     })
 
   }
