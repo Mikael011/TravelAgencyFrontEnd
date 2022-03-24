@@ -33,7 +33,7 @@ export class UserService {
 
 
   public login(userLoginDto: UserLoginDto): Observable<any> {
-    //aici inca mai avem o problema cu authentificarea
+    //aici inca mai avem o problema cu authentificarea(trebuie folosit din https://www.base64encode.org/  codul: YXJwaUBnbWFpbC5jb206MTIz)
     this.optionsWithAuthorizationHeader = {headers: {Authorization: 'Basic ' + btoa(userLoginDto.email + ':' + userLoginDto.password)}}
 
 
