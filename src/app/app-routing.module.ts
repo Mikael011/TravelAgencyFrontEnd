@@ -25,7 +25,9 @@ const routes: Routes = [
   {path: 'create-hotel', component:HotelFormComponent},
   {path: 'reservations', component: ReservationListComponent},
   {path: 'rooms', component: RoomListComponent},
+  {path: 'create-room', component: RoomListComponent},
   {path: 'tickets', component: TicketListComponent},
+  {path: 'create-ticket', component: TicketListComponent},
   {path: 'login', component: LoginComponent},
   {path: 'home-page', component: HomePageComponent},
 ];

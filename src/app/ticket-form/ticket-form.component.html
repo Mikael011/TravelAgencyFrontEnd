@@ -1,0 +1,26 @@
+<script src="../ticket-list/ticket-list.component.ts"></script>
+<div class="container">
+  <h1>Create new ticket</h1>
+  <form [formGroup]="ticketForm" (ngSubmit)="onSubmit()">
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Ticket name:</mat-label>
+        <input matInput formControlName="name">
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button type="submit">Create Ticket</button>
+
+  </form>
+
+  <a href="http://localhost:4200/create-ticket">
+    <button>Create-Tickets</button>
+  </a>
+
+  <br>
+  <br>
+  <a href="http://localhost:4200/home-page">
+    <button>Homepage</button>
+  </a>
+
+</div>

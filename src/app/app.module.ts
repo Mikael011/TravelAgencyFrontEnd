@@ -22,6 +22,10 @@ import { AirportFormComponent } from './airport-form/airport-form.component';
 import { HotelFormComponent } from './hotel-form/hotel-form.component';
 import { LoginComponent } from './login/login.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { ReservationFormComponent } from './reservation-form/reservation-form.component';
+import { TicketFormComponent } from './ticket-form/ticket-form.component';
+import { RoomFormComponent } from './room-form/room-form.component';
+import { TravelListComponent } from './travel-list/travel-list.component';
 
 
 
@@ -42,6 +46,10 @@ import { HomePageComponent } from './home-page/home-page.component';
     HotelFormComponent,
     LoginComponent,
     HomePageComponent,
+    ReservationFormComponent,
+    TicketFormComponent,
+    RoomFormComponent,
+    TravelListComponent,
   ],
   imports: [
     BrowserModule,
