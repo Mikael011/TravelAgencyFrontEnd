@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Create new hotel</h1>
+  <form [formGroup]="hotelForm" (ngSubmit)="onSubmit()">
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Hotel name:</mat-label>
+        <input matInput formControlName="name">
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button type="submit">Create hotel</button>
+
+  </form>
+
+  <br>
+  <br>
+  <a href="http://localhost:4200/hotels">
+    <button>Hotels</button>
+  </a>
+
+  <br>
+  <br>
+  <a href="http://localhost:4200/home-page">
+    <button>Homepage</button>
+  </a>
+
+</div>

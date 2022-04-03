@@ -1,0 +1,14 @@
+<h1>Welcome!</h1>
+<h1>Please login to continue</h1>
+
+<mat-form-field>
+  <mat-label>Email:</mat-label>
+  <input matInput [(ngModel)]="emailValue">
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Password:</mat-label>
+  <input matInput type="password" [ngModel]="passwordValue">
+</mat-form-field>
+
+<button mat-raised-button (click)="login()">Login</button>

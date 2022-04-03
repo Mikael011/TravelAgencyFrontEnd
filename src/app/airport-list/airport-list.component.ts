@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AirportDTO} from "../../model/airportDTO";
-import {AirportService} from "../service/airport.service";
+import {ReservationService} from "../service/airport.service";
 
 @Component({
   selector: 'app-airport-list',
@@ -11,7 +11,7 @@ export class AirportListComponent implements OnInit {
 
   airports: AirportDTO[] = [];
 
-  constructor(private airportService: AirportService) {
+  constructor(private airportService: ReservationService) {
     this.airportService = airportService;
   }
 

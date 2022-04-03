@@ -21,4 +21,10 @@ export class HotelService {
   public getAll(): Observable<Object> {
     return this.httpClient.get(this.hotelsUrl + "/findAll")
   }
+
+
+  public create(dto: { name: any }): Observable<Object> {
+    return this.httpClient.post(this.hotelsUrl + "/create", dto);
+
+  }
 }

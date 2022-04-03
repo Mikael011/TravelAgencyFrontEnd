@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Create new country</h1>
+  <form [formGroup]="countryForm" (ngSubmit)="onSubmit()">
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Country name:</mat-label>
+        <input matInput formControlName="name">
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button type="submit">Create country</button>
+
+  </form>
+
+  <br>
+  <br>
+  <a href="http://localhost:4200/countries">
+    <button>Countries</button>
+  </a>
+
+  <br>
+  <br>
+  <a href="http://localhost:4200/home-page">
+    <button>Homepage</button>
+  </a>
+</div>
+

@@ -18,4 +18,8 @@ export class ReservationService {
   public getAll(): Observable<Object> {
     return this.httpClient.get(this.reservationsUrl + "/findAll")
   }
+  public create(dto: { name: any }): Observable<Object> {
+    return this.httpClient.post(this.reservationsUrl + "/create", dto);
+  }
+
 }
