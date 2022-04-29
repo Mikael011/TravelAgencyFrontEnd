@@ -1,4 +1,8 @@
 export class AirportCreateDTO {
-  constructor(private name: string) {
-  }
+  name : string | undefined;
+  cityId : number | undefined;
+
+
+
+
 }

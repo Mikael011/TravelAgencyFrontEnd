@@ -1,11 +1,17 @@
 <script src="../airport-list/airport-list.component.ts"></script>
 <div class="container">
   <h1>Create new airport</h1>
-  <form [formGroup]="airportForm" (ngSubmit)="onSubmit()">
+  <form   (ngSubmit)="onSubmit()">
     <div>
       <mat-form-field appearance="outline">
         <mat-label>Airport name:</mat-label>
-        <input matInput formControlName="name">
+        <input matInput [(ngModel)]="airportCreateDTO.name"  name="name">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>City</mat-label>
+        <mat-select [(ngModel)]="airportCreateDTO.cityId"  name="cityId" >
+          <mat-option *ngFor="let city of cities" [value]="city.id">{{city.name}}</mat-option>
+        </mat-select>
       </mat-form-field>
     </div>
 

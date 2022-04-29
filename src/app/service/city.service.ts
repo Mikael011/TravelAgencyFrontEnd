@@ -20,12 +20,12 @@ export class CityService {
   // http://localhost:8081/api/v1/city/findAll
   public getAll(): Observable<Object> {
 
-    return this.httpClient.get(this.citiesUrl + "/findAll", {
-      headers: {
-        Authorization: 'Basic ' + btoa('arpi@gmail.com:123')
-      }
-    });
-    // return this.httpClient.get(this.citiesUrl + "/findAll",);
+    // return this.httpClient.get(this.citiesUrl + "/findAll", {
+    //   headers: {
+    //     Authorization: 'Basic ' + btoa('arpi@gmail.com:123')
+    //   }
+    // });
+     return this.httpClient.get(this.citiesUrl + "/findAll",);
   }
 
   create(createDto: { name: any }): Observable<CityDTO> {

@@ -26,6 +26,7 @@ import { ReservationFormComponent } from './reservation-form/reservation-form.co
 import { TicketFormComponent } from './ticket-form/ticket-form.component';
 import { RoomFormComponent } from './room-form/room-form.component';
 import { TravelListComponent } from './travel-list/travel-list.component';
+import {MatSelectModule} from "@angular/material/select";
 
 
 
@@ -60,7 +61,8 @@ import { TravelListComponent } from './travel-list/travel-list.component';
     MatInputModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
