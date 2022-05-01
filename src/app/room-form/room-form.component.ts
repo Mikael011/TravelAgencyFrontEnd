@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
-
+import {ReservationService} from "../service/airport.service";
 import {Router} from "@angular/router";
-import {RoomService} from "../service/room.service";
 
 @Component({
   selector: 'app-room-form',
@@ -11,7 +10,7 @@ import {RoomService} from "../service/room.service";
 })
 export class RoomFormComponent implements OnInit {
 
-  constructor(private roomService: RoomService, private router:Router) { }
+  constructor(private roomService: ReservationService, private router:Router) { }
 
   roomForm = new FormGroup({
     name: new FormControl('')
@@ -28,11 +27,11 @@ export class RoomFormComponent implements OnInit {
       name: this.roomForm.get('name')?.value,
     };
 
-this.roomService.create(roomDto).subscribe(response => {
-  alert(response);
-  this.router.navigate(['airports']);
-})
+    this.roomService.create(roomDto).subscribe(response => {
+      // alert(response);
+      this.router.navigate(['rooms']);
+    })
 
-}
+  }
 
 }
