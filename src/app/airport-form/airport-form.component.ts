@@ -26,6 +26,7 @@ export class AirportFormComponent implements OnInit {
     this.getCities();
   }
   cities : CityDTO[] = [];
+  airportForm: any;
   getCities(){
     this.cityService.getAll().subscribe(response => {
       this.cities = response as CityDTO[];
