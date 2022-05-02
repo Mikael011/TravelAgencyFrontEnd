@@ -1,12 +1,9 @@
-<!--TODO -fundalu gri de pus o fotografie sau un alt fundal
-- de rezolvat suprapunerea din "POPULAR PLACES"
-- de pus butoane de social media sub "FOLLOW US"
-- de marit imaginile din galerry la click
-- de verificat la formular suprapunerea
+<!--
+
 -->
 <!DOCTYPE html>
 <html>
-<h1>Booking</h1>
+<h2>Let us create your ideal vacation</h2>
 <head>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -16,14 +13,15 @@
 
 <body id="home" class="scrollspy">
 
-<!-- Search -->
-<section  id="searchDest" class="section section-search purple darken-4 white-text center scrollspy">
+  <!-- Search -->
+  <section  id="searchDest" class="section section-search purple darken-4 white-text center scrollspy">
   <div class="container">
     <div class="row">
       <div class="col s6">
         <h3>Search Destinations</h3>
         <div class="input-field">
-          <input  *ngIf="reservationRequest.destAirportId == 0" [(ngModel)]="searchDestString" (ngModelChange)="onDestTextChanged()" class="white grey-text autocomplete" placeholder="NewYork, London, etc..." type="text"
+          <input  *ngIf="reservationRequest.destAirportId == 0" [(ngModel)]="searchDestString" (ngModelChange)="onDestTextChanged()"
+                  class="white grey-text autocomplete" placeholder="NewYork, London, etc..." type="text"
                  id="autocomplete-inputDest">
         </div>
 
@@ -31,7 +29,8 @@
       <div class="col s6">
         <h3>Search Start</h3>
         <div class="input-field">
-          <input  *ngIf="reservationRequest.startAirportId == 0" [(ngModel)]="searchStartString" (ngModelChange)="onStartTextChanged()" class="white grey-text autocomplete" placeholder="NewYork, London, etc..." type="text"
+          <input  *ngIf="reservationRequest.startAirportId == 0" [(ngModel)]="searchStartString" (ngModelChange)="onStartTextChanged()"
+                  class="white grey-text autocomplete" placeholder="NewYork, London, etc..." type="text"
                  id="autocomplete-inputStart">
         </div>
       </div>
@@ -41,7 +40,8 @@
         <div *ngIf="searchDestString && reservationRequest.destAirportId == 0">
           <div   *ngFor="let airport of airports">
             <p>name :{{airport.city.country.name}} {{airport.city.name}} {{airport.name}} </p>
-            <input  class="mat-button" *ngIf="reservationRequest.destAirportId == 0" type="button" name="setDest" value="Select" (click)="setDest(airport)">
+            <input  class="mat-button" *ngIf="reservationRequest.destAirportId == 0" type="button" name="setDest"
+                    value="Select" (click)="setDest(airport)">
           </div>
         </div>
         <div>
@@ -87,7 +87,7 @@
   <div class="container">
     <div class="row">
       <div class="col s12">
-        <h3 >Request submitted.Confirmation sent at   {{reservationRequest.clientEmail}}</h3>
+        <h4 >Request submitted.You will receive a custom offer at {{reservationRequest.clientEmail}} </h4>
       </div>
     </div>
   </div>
