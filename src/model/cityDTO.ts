@@ -1,9 +1,8 @@
-export class CityDTO {
-  id : number;
-  name: string;
+import {CountryDTO} from "./countryDTO";
 
-  constructor( name: string, id: number) {
-    this.name = name;
-    this.id = id;
-  }
+export class CityDTO {
+  id : number =0;
+  name: string ="";
+  country : CountryDTO = new CountryDTO();
+
 }

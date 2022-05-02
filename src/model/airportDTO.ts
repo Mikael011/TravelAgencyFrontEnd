@@ -1,9 +1,10 @@
-export class AirportDTO {
-  name: string;
-  cityId: number;
+import {CityDTO} from "./cityDTO";
 
-  constructor(name: string, cityId: number) {
-    this.name = name;
-    this.cityId = cityId;
-  }
+export class AirportDTO {
+  id : number = 0;
+  name: string="";
+  cityId: number=0;
+  city: CityDTO = new CityDTO();
+
+
 }

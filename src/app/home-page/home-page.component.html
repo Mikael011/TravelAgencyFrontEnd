@@ -17,19 +17,84 @@
 <body id="home" class="scrollspy">
 
 <!-- Search -->
-<section id="search" class="section section-search purple darken-4 white-text center scrollspy">
+<section  id="searchDest" class="section section-search purple darken-4 white-text center scrollspy">
+  <div class="container">
+    <div class="row">
+      <div class="col s6">
+        <h3>Search Destinations</h3>
+        <div class="input-field">
+          <input  *ngIf="reservationRequest.destAirportId == 0" [(ngModel)]="searchDestString" (ngModelChange)="onDestTextChanged()" class="white grey-text autocomplete" placeholder="NewYork, London, etc..." type="text"
+                 id="autocomplete-inputDest">
+        </div>
+
+      </div>
+      <div class="col s6">
+        <h3>Search Start</h3>
+        <div class="input-field">
+          <input  *ngIf="reservationRequest.startAirportId == 0" [(ngModel)]="searchStartString" (ngModelChange)="onStartTextChanged()" class="white grey-text autocomplete" placeholder="NewYork, London, etc..." type="text"
+                 id="autocomplete-inputStart">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s6">
+        <div *ngIf="searchDestString && reservationRequest.destAirportId == 0">
+          <div   *ngFor="let airport of airports">
+            <p>name :{{airport.city.country.name}} {{airport.city.name}} {{airport.name}} </p>
+            <input  class="mat-button" *ngIf="reservationRequest.destAirportId == 0" type="button" name="setDest" value="Select" (click)="setDest(airport)">
+          </div>
+        </div>
+        <div>
+          <p *ngIf="selectedEnd"> {{selectedEnd.city.country.name}} {{selectedEnd.city.name}} {{selectedEnd.name}} </p>
+        </div>
+      </div>
+      <div class="col s6">
+        <div *ngIf="searchStartString &&  reservationRequest.startAirportId == 0">
+          <div   *ngFor="let airport of airports">
+            <p>name :{{airport.city.country.name}} {{airport.city.name}} {{airport.name}} </p>
+            <input  class="mat-button" *ngIf="reservationRequest.startAirportId == 0" type="button" name="setStart" value="Select" (click)="setStart(airport)">
+          </div>
+        </div>
+        <div>
+          <p *ngIf="selectedStart"> {{selectedStart.city.country.name}} {{selectedStart.city.name}} {{selectedStart.name}} </p>
+        </div>
+      </div>
+    </div>
+    <div class="row" *ngIf="reservationRequest.startAirportId != 0 && reservationRequest.destAirportId != 0">
+      <div class="col s1"></div>
+      <div class="col s10">
+        <div class="input-field">
+
+          <input type="text" name="clientName" id="clientName" placeholder="Name"  [(ngModel)]="reservationRequest.clientName">
+        </div>
+        <div class="input-field">
+          <input type="text" name="clientEmail" placeholder="Email"   [(ngModel)]="reservationRequest.clientEmail">
+        </div>
+        <div class="input-field">
+          <input type="text" name="clientPhone" placeholder="Phone"   [(ngModel)]="reservationRequest.phoneNumber">
+        </div>
+        <div class="input-field">
+          <input type="button" class="mat-button" name="submit" value="Submit" (click)="submit()">
+        </div>
+      </div>
+      <div class="col s1"></div>
+    </div>
+  </div>
+</section>
+
+
+<section *ngIf="reservationRequest.submitted"  id="confirmation" class="section section-search purple darken-4 white-text center scrollspy">
   <div class="container">
     <div class="row">
       <div class="col s12">
-        <h3>Search Destinations</h3>
-        <div class="input-field">
-          <input class="white grey-text autocomplete" placeholder="NewYork, London, etc..." type="text"
-                 id="autocomplete-input">
-        </div>
+        <h3 >Request submitted.Confirmation sent at   {{reservationRequest.clientEmail}}</h3>
       </div>
     </div>
   </div>
 </section>
+
+
+
 
 <!-- Icon Boxes -->
 <section class="section section-icons grey lighten-4 center">

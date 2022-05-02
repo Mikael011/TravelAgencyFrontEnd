@@ -29,4 +29,8 @@ export class AirportService {
   public getAirportsByCountry( countryId : number ): Observable<Object> {
     return this.httpClient.post(this.airportsUrl + "/getAirportsByCountry", countryId);
   }
+
+  public searchAirportsByText( searchString : string ): Observable<Object> {
+    return this.httpClient.get(this.airportsUrl + "/search?searchString=" + searchString);
+  }
 }

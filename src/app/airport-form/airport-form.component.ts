@@ -18,7 +18,7 @@ export class AirportFormComponent implements OnInit {
   airportCreateDTO : AirportCreateDTO = new AirportCreateDTO();
 
   // airportForm = new FormGroup({
-  //   name: new FormControl(''),
+  //   name: new FormControl(''
   //   city: new FormControl('')
   // })
 
